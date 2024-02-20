@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 First, run the development server:
 
-```bash
+````bash
 npm run dev
 # or
 yarn dev
@@ -12,7 +12,22 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
+
+
+## Getting gNews API Key
+
+To fetch news data from gNews, you need to obtain an API key. Follow these steps:
+
+1. Go to [gNews](https://gnews.io/docs/)
+2. Click on `Get API Key`.
+3. Sign up or log in to your account.
+4. After logging in, you will be redirected to a page where you can see your API key.
+
+Once you have the API key, create a new file in the root of the project named `.env.local` and add the following line:
+
+```bash
+NEXT_PUBLIC_GNEWS_API_KEY=your_api_key
+````
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
