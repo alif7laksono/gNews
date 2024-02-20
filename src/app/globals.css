@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-black;
+}
+
+body.dark {
+  @apply bg-black text-white;
+}
+
+.dark {
+  --bg: #1a202c;
+  --textColor: #e2e8f0;
+  --softBg: #2d3748;
+  --softTextColor: #a0aec0;
+}
+
+.light {
+  --bg: #edf2f7;
+  --textColor: #2d3748;
+  --softBg: #f7fafc;
+  --softTextColor: #718096;
+}
