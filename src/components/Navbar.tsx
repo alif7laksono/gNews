@@ -43,7 +43,7 @@ const Navbar = () => {
         <button onClick={toggle}>
           {theme === "dark" ? <FaSun /> : <FaMoon />}
         </button>
-        <Link href="/SignIn" className="text-base">
+        <Link href="/" className="text-base">
           Sign In
         </Link>
       </div>
