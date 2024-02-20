@@ -36,7 +36,7 @@ const Card: React.FC<CardProps> = ({ article }) => {
           href={article.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sky-500 hover:no-underline mt-2 inline-block text-inherit hover:scale-105 transition duration-200"
+          className="hover:no-underline mt-2 inline-block text-inherit hover:scale-105 transition duration-200"
         >
           <h1 className="flex flex-1 flex-col font-semibold line-clamp-2 text-lg transition duration-200">
             {article.title}
