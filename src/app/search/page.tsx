@@ -36,29 +36,46 @@ const SearchPage: React.FC = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {articles.map((article, index) => (
-          <div key={index} className="bg-white p-4 rounded-lg shadow-md">
-            <img
-              src={article.image}
-              alt={article.title}
-              className="w-full h-64 object-cover mb-4 rounded-t-lg"
-            />
-            <h2 className="text-xl font-bold mb-2">{article.title}</h2>
-            <p className="text-gray-700">{article.description}</p>
-            <p className="text-sm text-gray-500">
-              Published at: {new Date(article.publishedAt).toLocaleDateString()}
-            </p>
-            <p className="text-sm text-gray-500">
-              Source: {article.source.name}
-            </p>
+          <div
+            key={index}
+            className="p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col justify-between"
+          >
+            <div>
+              <img
+                src={article.image}
+                alt={article.title}
+                className="w-full h-64 object-cover mb-6 rounded-t-lg"
+              />
+              <Link
+                href={article.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:no-underline mt-2 inline-block hover:scale-105 transition-transform duration-300 ease-in-out"
+              >
+                <h2 className="text-2xl font-bold mb-4 line-clamp-2">
+                  {article.title}
+                </h2>
+                <p className="text-base text-gray-400 mb-4 line-clamp-4">
+                  {article.description}
+                </p>
+                <p className="text-sm text-gray-500 mb-2">
+                  Published at:{" "}
+                  {new Date(article.publishedAt).toLocaleDateString()}
+                </p>
+                <p className="text-sm text-gray-500 mb-4">
+                  Source: {article.source.name}
+                </p>
+              </Link>
+            </div>
             <Link
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:underline mt-2 inline-block"
+              className="hover:no-underline mt-2 inline-block hover:scale-105 transition-transform duration-300 ease-in-out"
             >
-              Read more
+              <span className="text-sky-500 h-12">Read more</span>
             </Link>
           </div>
         ))}
